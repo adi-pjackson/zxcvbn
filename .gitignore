@@ -1,4 +1,7 @@
 *~
 *.js
 !zxcvbn.js
+!zxcvbn.min.js
+!async.js
+!zxcvbn-async.min.js
 test/index_dev.html
