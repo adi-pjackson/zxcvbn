@@ -26,11 +26,11 @@ def get_ranked_english():
         freq_range = "%d-%d" % (i * 1000 + 1, (i+1) * 1000)
         urls.append(URL_TMPL % freq_range)
 
-    for i in xrange(0,15):
-        freq_range = "%d-%d" % (10000 + 2 * i * 1000 + 1, 10000 + (2 * i + 2) * 1000)
-        urls.append(URL_TMPL % freq_range)
+    # for i in xrange(0,15):
+    #     freq_range = "%d-%d" % (10000 + 2 * i * 1000 + 1, 10000 + (2 * i + 2) * 1000)
+    #     urls.append(URL_TMPL % freq_range)
 
-    urls.append(URL_TMPL % '40001-41284')
+    # urls.append(URL_TMPL % '40001-41284')
 
     ranked_terms = [] # ordered by rank, in decreasing frequency.
     for url in urls:
@@ -98,7 +98,7 @@ def get_ranked_census_names():
     http://www.census.gov/genealogy/names/dist.female.first
     '''
     FILE_TMPL = '../data/us_census_2000_%s.txt'
-    SURNAME_CUTOFF_PERCENTILE = 85 # ie7 can't handle huge lists. cut surname list off at a certain percentile.
+    SURNAME_CUTOFF_PERCENTILE = 60 # ie7 can't handle huge lists. cut surname list off at a certain percentile.
     lists = []
     for list_name in ['surnames', 'male_first', 'female_first']:
         path = FILE_TMPL % list_name
